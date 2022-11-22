@@ -1,0 +1,177 @@
+  *{
+    box-sizing: border-box;   
+  }
+
+  html, body {
+   padding: 0px;
+   margin: 0px;
+   height: 100%
+  }
+  .max-width{
+      max-width: 1500px;
+      padding: 0 80px;
+      margin: auto;
+  }
+
+ /*navbar styling */ 
+   .navbar{
+      position: fixed;
+      width: 100%;
+      background: black;
+      padding: 15px 0;
+      font-family: Arial, Helvetica, sans-serif;
+      transition: all 0.3s ease-in-out;
+   }
+   .navbar.sticky{
+      padding: 10px 0;
+      background: rgb(151, 109, 2);
+   }
+   .navbar .max-width{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   .navbar .img{
+    height: "50%";
+   }
+   .navbar .logo a{
+      color: #fff;
+      font-style: italic;
+      font-size: 35px;
+      font-weight: 600;
+      text-decoration-style:dotted;
+      text-decoration-color:rgb(151, 109, 2) ;
+   }
+   .navbar .logo a span{
+      color: rgb(151, 109, 2);
+      transition: all 0.3s ease;
+   }
+   .navbar.sticky .logo a span{
+      color: #fff;
+      
+   }
+
+   .navbar .menu li{
+      list-style:disc;
+      display: inline-block;
+   }
+
+   .navbar .menu li a{
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      margin-left: 25px;
+      transition: color 0.3s ease;
+ }
+   .navbar .menu li a:hover{
+      color: rgb(151, 109, 2);
+      transition: all 0.3s ease;
+   }
+   .navbar.sticky .menu li a:hover{
+      color: #fff;
+   }  
+  /* menu btn styling */
+   .menu-btn{
+      color: #fff;
+      font-size: 23px;
+      cursor: pointer; 
+      display: none;
+
+   }
+
+  /* home section styling */
+  .home{
+      display: flex;
+      background: url(jhpte;10.jfif) no-repeat center;
+      background-size:cover;
+      background-attachment: fixed;
+      height: 110vh;
+      color: white;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+  }
+
+  .home .max-width{
+      margin: auto 150px 0;
+  }
+
+  .home .home-content .text-1{
+      font-size: 25px;
+      color: black;
+      font-weight: 300;
+  }
+  .home .home-content .text-2{
+    font-size: 55px;
+    font-weight: 600;
+    color: crimson;
+    margin-left: 3px;
+}
+.home .home-content .text-3{
+  color: black;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: gold;
+    font-weight: 500;
+}
+.home .home-content a{
+     display: inline-block;
+     background:black;
+     color:crimson; 
+     font-size: 20px;
+     font-weight: 600;
+     padding: 12px 36px;
+     margin-top: 20px;
+     border-radius: 6px;
+     border: 2px solid black;
+     transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+     color: #fff;
+     background: crimson;
+
+}
+/* responsive media query start */
+@media (max-width: 1104px){
+  .home .max-width{
+      margin-left: 0px;
+      padding: 0 50px;
+  }
+@media (max-width: 947px){
+   .max-width{
+      padding: 0 50px;
+   }
+   .menu-btn{
+      display: block;
+      z-index: 999;
+   }
+   .menu-btn i.active:before{
+      content: "\f00d";
+   }
+   .navbar .menu{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #111;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+   }
+   .navbar .menu.active{
+      left: 0%;
+   }
+   .navbar .menu li{
+      display: block;
+   }
+   .navbar .menu li a{
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+   }
+}
+
